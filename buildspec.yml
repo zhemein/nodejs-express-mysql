@@ -4,7 +4,7 @@ phases:
     runtime-versions:
       python: 3.8
     commands:
-      - apt-get update && apt-get install -y unzip git
+      - yum update && yum install -y unzip git
       - curl -Lo terraform.zip https://releases.hashicorp.com/terraform/1.8.4/terraform_1.8.4_linux_amd64.zip
       - unzip terraform.zip -d /usr/local/bin/
       - rm terraform.zip
