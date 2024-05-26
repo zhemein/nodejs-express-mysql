@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial Management</title>
+    <script>
+        const API_URL = '%%API_URL%%';
+    </script>
+</head>
+<body>
+    <h1>Tutorial Management</h1>
+
+    <h2>Create a Tutorial</h2>
+    <form id="createForm">
+        Title: <input type="text" id="title"><br>
+        Description: <input type="text" id="description"><br>
+        Published: <input type="checkbox" id="published"><br>
+        <button type="submit">Create Tutorial</button>
+    </form>
+
+    <h2>Tutorial Actions</h2>
+    <button onclick="findAllTutorials()">Get All Tutorials</button>
+    <button onclick="findPublishedTutorials()">Get Published Tutorials</button>
+
+    <h2>Search by ID</h2>
+    ID: <input type="text" id="searchId">
+    <button onclick="findTutorialById()">Search Tutorial</button>
+
+    <h2>Update Tutorial</h2>
+    ID: <input type="text" id="updateId">
+    New Title: <input type="text" id="updateTitle">
+    New Description: <input type="text" id="updateDescription">
+    Published: <input type="checkbox" id="updatePublished">
+    <button onclick="updateTutorial()">Update Tutorial</button>
+
+    <h2>Delete Tutorial</h2>
+    ID: <input type="text" id="deleteId">
+    <button onclick="deleteTutorial()">Delete Tutorial</button>
+
+    <button onclick="deleteAllTutorials()">Delete All Tutorials</button>
+
+    <div id="responseArea"></div>
+
+    <script src="client.js"></script>
+</body>
+</html>
+

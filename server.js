@@ -9,7 +9,7 @@ var corsOptions = {
 };
 
 app.use(cors(corsOptions));
-
+require("./app/models/db.init.js");
 // parse requests of content-type - application/json
 app.use(express.json()); /* bodyParser.json() is deprecated */
 
