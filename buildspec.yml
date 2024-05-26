@@ -11,6 +11,8 @@ phases:
   build: 
     commands:
       - git clone https://github.com/zhemein/scbzorro
-      - cd scbzorro && terraform init
-      - terraform plan
-      - terraform apply -auto-approve
+      - echo '$TF_VAR_dbusername'
+      - echo '$TF_VAR_dbpassword'
+      - #cd scbzorro && terraform init
+      - #terraform plan
+      - #terraform apply -auto-approve
