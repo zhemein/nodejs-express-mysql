@@ -8,11 +8,9 @@ phases:
       - curl -Lo terraform.zip https://releases.hashicorp.com/terraform/1.8.4/terraform_1.8.4_linux_amd64.zip
       - unzip terraform.zip -d /usr/local/bin/
       - rm terraform.zip
-  pre_build: 
+  build: 
     commands:
       - git clone https://github.com/zhemein/scbzorro
       - cd scbzorro && terraform init
-  build: 
-    commands:
       - cd scbzorro && terraform plan
       - cd scbzorro && terraform apply -auto-approve
